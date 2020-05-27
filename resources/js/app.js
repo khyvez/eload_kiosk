@@ -56,6 +56,9 @@ Vue.component('home-page', require('./components/Home.vue').default);
 
 Vue.component('globe-page', require('./components/Globe.vue').default);
 Vue.component('tnt-page', require('./components/Tnt.vue').default);
+Vue.component('cignal-page', require('./components/cignal.vue').default);
+Vue.component('satlite-page', require('./components/satlite.vue').default);
+Vue.component('loadwallet-page', require('./components/loadwallet.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

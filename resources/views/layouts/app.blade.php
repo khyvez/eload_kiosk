@@ -75,6 +75,16 @@
     padding: 30px;
     box-shadow: 0px 0px 6px 1px #00000080;
 }
+.choice2{
+    height: 150px;
+    background: #aeafb169;
+    width: 250px;
+    opacity: 1;
+    border: 1px solid #acacaca1;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 6px 1px #00000080;
+}
 .card-choice{
 
     background: #aeafb169;
@@ -93,6 +103,21 @@
 }
 input.form-control{
     font-size: 30px;
+    font-weight: bold;
+}
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+.btn-lg{
+    height: 60px !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+::placeholder {
+    color: #e8e8e8 !important;
 }
     </style>
 </head>

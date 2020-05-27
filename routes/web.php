@@ -35,6 +35,15 @@ Route::get('/tnt', function(){
 Route::get('/smart', function(){
     return view('keyboard');
 });
+Route::get('/cignal', function(){
+    return view('cignal');
+});
+Route::get('/satlite', function(){
+    return view('satlite');
+});
+Route::get('/loadwallet', function(){
+    return view('loadwallet');
+});
 
 Route::get('/dashboard', function(){
     return view('layouts.dashboard');

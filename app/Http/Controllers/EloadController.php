@@ -85,9 +85,22 @@ class EloadController extends Controller
              
                 $eload->keyword = $request->keyword;
             }
+
+            if($request->network == 'cignal' || $request->network == 'satlite'){
+                if($request->load_amount == '99'){
+                    $eload->purchase_amount = '110';
+                }else{
+                    $eload->purchase_amount = $request->load_amount + 10 ;
+                }
+                
+            }else{
+                $eload->purchase_amount = $request->load_amount + 2 ;
+            }
+
+            
             $eload->load_amount = $request->load_amount;
             $eload->contact = $request->contact;
-            $eload->purchase_amount = $request->load_amount + 3 ;
+          
             $eload->menu_number = $request->menu_number;
             $eload->network = $request->network;
             $eload->save();

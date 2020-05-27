@@ -18,6 +18,8 @@ Promo
                 <option value="smart">Smart</option>
                 <option value="tnt">TNT</option>
                 <option value="globe">Globe</option>
+                <option value="cignal">Cignal</option>
+                <option value="satlite">Satlite</option>
               </select>
             </div>
         </div>

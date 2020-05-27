@@ -34,7 +34,7 @@
                 </div>
                 <div id="collapseOne" class="card-body collapse show " data-parent="#accordion">
                    <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                        
               <small><label for="">Cellphone #</label></small>
                            
@@ -44,14 +44,14 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-mobile    "></i></span>
                           </div>
-                          <input v-model="contact"   placeholder="ex: 9290192929" class="form-control" @focus="show" data-layout="numeric"
+                          <input v-model="contact"   placeholder="ex: 09290192929" class="form-control" @focus="show" data-layout="numeric"
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         type = "number"
-        maxlength = "10"
+        maxlength = "11"
 />
                  </div>
                    </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-5">
                                 <small><label for="">Amount</label></small>
 
                                        <div class="input-group mb-3">
@@ -69,14 +69,12 @@
                               <input v-model="loadtype"  type="hidden" name="loadtype">
                        
                          
-                   
-                    </div> 
-                    <div class="row">
-                      <div class="col py-2">
+                           <div class="col py-5">
                                  <button @click="buyBtn()" type="submit" class="btn btn-lg btn-primary btn-block">Buy Load</button>
                            
                       </div>
-                    </div>
+                    </div> 
+                
                     <div class="row">
                       <div class="col">
                              <vue-touch-keyboard :options="options" v-if="visible" :layout="layout" :cancel="hide" :accept="accept" :input="input" />
@@ -92,7 +90,7 @@
                 </div>
                 <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                           
 
                             <div class="form-group">
@@ -102,15 +100,15 @@
                           <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-mobile    "></i> </i>  </span>
                           </div>
-                          <input v-model="contact"   placeholder="ex: 9290192929" class="form-control" @focus="show" data-layout="numeric"
+                          <input v-model="contact"   placeholder="ex: 09290192929" class="form-control" @focus="show" data-layout="numeric"
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         type = "number"
-        maxlength = "10"
+        maxlength = "11"
 />
                  </div>
                               </div>
                               </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                  <div class="form-group">
                                     <small><label for="">Promo</label></small>
                                          <Select2 v-model="myValue" :options="myOptions" :settings="{ settingOption: value, settingOption: value }" @change="myChangeEvent($event)" @select="mySelectEvent($event)" />
@@ -122,14 +120,14 @@
                            
                              
                         </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                                   <div class="form-group mt-2">
-                                    <button @click="buyPromo()" class="btn  btn-primary btn-block">Buy Promo</button>
+
+                            <div class="col-md-2 py-5">
+                                   <div class="form-group">
+                                    <button @click="buyPromo()" class="btn btn-lg btn-primary btn-block">Buy Promo</button>
                                 </div>
                         </div>
-                      </div>
+                    </div>
+                 
 
                            <div class="row">
                       <div class="col">
@@ -280,10 +278,10 @@
               }
 		    },
         buyBtn(){
-                   var kano = parseInt(this.load_amount)  + parseInt(3);
+                   var kano = parseInt(this.load_amount)  + parseInt(2);
           if(this.contact.length != 0 && this.load_amount.length != 0){
 
-              if(this.contact.length < 10){
+              if(this.contact.length < 11){
           
                         Swal.fire(
                           'Error!',
@@ -338,8 +336,8 @@
                 var txt = this.myValueTex;
                   var numb = txt.match(/\d/g);
                   numb = numb.join("");
-                var kano = parseInt(numb) + parseInt(3);
-              if(this.contact.length < 10){
+                var kano = parseInt(numb) + parseInt(2);
+              if(this.contact.length < 11){
           
                         Swal.fire(
                           'Error!',
